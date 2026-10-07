@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cowsay"
+version = "0.1.0"
+description = "Make a cow say something"
+requires-python = ">=3.8"
+
+[project.scripts]
+cowsay = "cowsay.__main__:main"
+
+[tool.setuptools]
+packages = ["cowsay"]
