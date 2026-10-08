@@ -5,13 +5,13 @@ import textwrap
 
 def cowsay(text, width=40):
     wrapped = textwrap.wrap(text, width) if len(text) > width else [text]
-    max_len = max( len(line) for line in wrapped )
+    max_len = max(len(line) for line in wrapped)
     
     # Build speech bubble
     lines = []
     lines.append(" " +"_" * (max_len + 2))
     
-    if len(wrapped) ==1:
+    if len(wrapped) == 1:
         lines.append(f"| {wrapped[0].ljust(max_len)} |")
     else:
         for i, line in enumerate(wrapped):
