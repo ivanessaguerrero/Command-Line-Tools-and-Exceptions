@@ -19,7 +19,7 @@ def cowsay(text, width=40):
                 lines.append(f"\\ {line.ljust(max_len)} /")
             else:
                 lines.append(f"| {line.ljust(max_len)} |")
-    
+
     lines.append(" " + "-" * (max_len + 2))
     # Add cow
     cow = r"""        \   ^__^
@@ -35,7 +35,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("text", help="The text for the cow to say")
     args = parser.parse_args()
-    
+
     print(cowsay(args.text))
 
 
